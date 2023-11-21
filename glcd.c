@@ -58,7 +58,7 @@ void glcd_cmd(unsigned char ch)
 void glcd_init()
 {
     PINSEL0 = PINSEL1 = PINSEL2 = 0;
-    IODIR0 = en | rs;
+    IODIR0 = en | rw;
     IODIR1 = cs1 | cs2 | grst | lcd_port | rs;
 
     IOSET1 = cs1 | cs2 | grst;
